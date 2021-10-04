@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="utf-8">
     <!-- set the character set -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- first step to a responsive site -->
-    <title>Erosion in the Rockaways is Inevitable. It's Also a Public Safety Issue.</title>
+    <title>Flexbox styling</title>
 
     <!-- FONT AWESOME -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
     <!-- Your styles should be called here -->
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -20,38 +22,76 @@
       	  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       	  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       	<![endif]-->
-</head>
+  </head>
 
-<body>
-  <div class="flexbox-container">
+  <body>
+    <!-- YOUR CONTENT GOES HERE -->
+    <div class="container">
+      <section class="top">
+        <h1>Hi, I'm Katherine Clary.</h1>
+        <h2>I'm a New York City based writer, independent publisher and editor.</h2>
+      </section>
+      <!-- <section class="photo"> -->
 
-  <h1>Erosion in the Rockaways is Inevitable. It's Also a Public Safety Issue.</h1>
+      <figure>
+        <img class="large" src="images/BB-2.png">
+        <figcaption><span class="credit">Credit: Benedict Brink</span></figcaption>
+      </figure>
 
-<figure>
-  <img alt="beach" src='images/erosion.jpeg' class="center">
-  <figcaption>Credit: US Army Corps of Engineers</figcaption>
-</figure>
+      <section class="text">
+        <p>My current work focuses on the intersection of viticulture, design and community.</p>
+        <p>My book <a href="https://www.runningpress.com/titles/katherine-clary/wine-unfiltered/9780762469963/">Wine, Unfiltered</a> (Hachette, 2020) discusses the culture, history and systems around natural winemaking and grape growing.</p>
+      </section>
 
-  <section>
-    <img alt="grapes" src='images/drowning.png'>
-<p>Because beaches are frequently closed due to lack of significant amounts of sand, lifeguards are no longer on duty. While the public is prohibited from swimming in these sections, drownings still persist.
-</p>
-</section>
+      <h3 class="flex-hed">Recent Issues of The Wine Zine, a Biannual Magazine About Natural and Low Intervention Wine</h3> <!-- broke the subhed out of text to correct alignment based on mock -->
 
-<section>
-  <img alt="grapes" src='images/flooding.png'>
-<p>Sand dunes create important barriers between beaches and communities. When erosion withers them away, communities are at higher risk for flooding when storms happen.
-</p>
-</section>
+      <section class="flex">
+        <!-- flex box refers to the box that contains the "flexed" content -->
 
-<section>
-  <img alt="grapes" src='images/deadbird.png'>
-<p>The beach and its dunes are a delicate ecosystem for hundreds of New York wildlife species. When we lose the dunes, we lose our most precious wild animals.
-</p>
-</section>
+        <section class="img_holder">
+          <!-- each img_holder is flexed content -->
+          <figure class="sub_img">
+            <img class="main-img" src="images/04 copy.jpeg"> <!-- You should crop your images to be the same size before using them, otherwise, even with flex box, they come out uneven -->
+            <figcaption class="sub_cap">Wine Zine 04, Spring 2019 <span class="credit"></span></figcaption>
+          </figure>
+          <section class="sub_text">
+            <p>We visit a biodynamic winemaker in Emilia-Romagna, see grape harvest in Japan, hear some history from Thom Eagle on Sicily's Mt. Etna, view Dike Blair's paintings, and more.
+            </p>
+          </section>
+        </section>
 
-</div>
+
+        <section class="img_holder">
+          <figure class="sub_img">
+            <img class="main-img" src="images/05 copy.JPG">
+            <figcaption class="sub_cap">Wine Zine 05, Fall 2020 <span class="credit"></span></figcaption>
+          </figure>
+          <section class="sub_text">
+            <p>We visit Lebanon's worker cooperative winery Couvent Rouge, get a recipe for grape granita from Kia Damon, follow Cole Wilson on a road trip across the country, and explore conventional wine additives with Chelsie Craig.</p>
+          </section>
+        </section>
+
+
+        <section class="img_holder">
+          <figure class="sub_img">
+            <img class="main-img" src="images/O0070341 copy.jpg">
+            <figcaption class="sub_cap">Wine Zine 06, Coming Winter 2021 <span class="credit"></span></figcaption>
+          </figure>
+          <section class="sub_text">
+            <p>We go to Greece with Marco Arguelo, explore vin jaune through the words of Stephane Tissot, observe native Russian grapes in their process of fermentation, and more.</p>
+          </section>
+        </section>
+
+      </section>
+      <!-- this ^ closes the flex box section -->
+
+    </div>
+
+    <!-- When you get to using javascript, you'll want to link to it at the bottom of the document, still inside the body. That's for later. -->
+    <!-- the jQuery library. You need this to be able to use jQuery ($) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Your javascript should be called here -->
-</body>
+
+  </body>
 
 </html>
